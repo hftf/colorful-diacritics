@@ -11,7 +11,7 @@ function cluster(word) {
     var split = word.split(nonMn);
     var clustered = split.shift();
     while (split.length) {
-        var letter = split.shift(), vowels = split.shift(), untittled = letter in tittles ? tittles[letter] : letter;
+        var letter = split.shift(), vowels = split.shift(), untittled = (letter in tittles && vowels) ? tittles[letter] : letter;
         clustered += '<span class="cluster" data-letter="' + untittled + '">' + letter + vowels + '</span>';
     }
     return clustered;
