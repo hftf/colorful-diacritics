@@ -1,4 +1,4 @@
-@font-face {
+B0;136;0c@font-face {
     font-family: 'SBL Hebrew';
     src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
 }
@@ -8,6 +8,9 @@ body {
 }
 p {
     margin: 0;
+}
+:lang(en) {
+    font-family: 'Arno Pro';
 }
 :lang(he) {
     font-family: 'SBL Hebrew';
