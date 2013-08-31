@@ -17,6 +17,7 @@ p {
     white-space: nowrap;
 }
 .cluster {
+    /* Leave this to prevent the first letter from anti-wrapping */
     display: inline-block;
 }
 .word .cluster::first-letter {}
@@ -35,5 +36,11 @@ p {
 .word:hover .cluster::before {
     content: attr(data-letter);
     position: absolute;
-    top: 0; right: 0;
+    top: 0;
+}
+:lang(en) .word:hover .cluster::before {
+    left: 0;
+}
+:lang(he) .word:hover .cluster::before {
+    right: 0;
 }
