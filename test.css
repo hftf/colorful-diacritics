@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'SBL Hebrew';
+    src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
+}
+
 body {
     font-size: 8em;
 }
