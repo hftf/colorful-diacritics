@@ -1,6 +1,10 @@
-B0;136;0c@font-face {
+@font-face {
     font-family: 'SBL Hebrew';
     src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
+}
+@font-face {
+    font-family: 'Droid Naskh';
+    src: local('Droid Naskh'), url('DroidNaskh-Regular.ttf');
 }
 
 body {
@@ -16,6 +20,11 @@ p {
     font-family: 'SBL Hebrew';
     direction: rtl;
 }
+:lang(ar) {
+    font-family: 'Droid Naskh';
+    direction: rtl;
+}
+
 .word {
     white-space: nowrap;
 }
