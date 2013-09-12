@@ -30,10 +30,10 @@ p {
 }
 .cluster {
     /* Leave this to prevent the first letter from anti-wrapping */
-    display: inline-block;
+    /* display: inline-block; */
 }
 .word .cluster::first-letter {}
-.word:hover .cluster::before {
+.word:hover .cluster::after {
     color: #f5d30b;
     -webkit-text-stroke: 1.5px black;
     -webkit-text-fill-color: #f5d30b;
@@ -45,14 +45,14 @@ p {
 .word:hover .cluster {
     position: relative;
 }
-.word:hover .cluster::before {
+.word:hover .cluster::after {
     content: attr(data-letter);
     position: absolute;
     top: 0;
 }
-:lang(en) .word:hover .cluster::before {
+:lang(en) .word:hover .cluster::after {
     left: 0;
 }
-:lang(he) .word:hover .cluster::before {
+:lang(he) .word:hover .cluster::after {
     right: 0;
 }
