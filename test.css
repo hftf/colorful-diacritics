@@ -53,6 +53,6 @@ p {
 :lang(en) .word:hover .cluster::after {
     left: 0;
 }
-:lang(he) .word:hover .cluster::after {
+:lang(he) .word:hover .cluster::after, :lang(ar) .word:hover .cluster::after {
     right: 0;
 }
