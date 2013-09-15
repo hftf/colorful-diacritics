@@ -36,6 +36,9 @@ function cluster_letter(word, lang, positions) {
 
     while (split.length) {
         var letter = split.shift(), vowels = split.shift();
+        while (vowels === '' && split.length && split[1] === '')
+            letter += split.shift(), vowels += split.shift();
+
         var lettervowels = letter + vowels;
         var untittled = (letter in tittles && vowels) ? tittles[letter] : letter;
 
@@ -46,7 +49,7 @@ function cluster_letter(word, lang, positions) {
             lettervowels = prejoin + lettervowels + postjoin;
         }
 
-	if (next === true || next === pos) {
+        if (next === true || next === pos) {
             clustered += '<span class="cluster" data-letter="' + untittled + '">' + lettervowels + '</span>';
             if (next !== true)
                 next = positions.shift();
