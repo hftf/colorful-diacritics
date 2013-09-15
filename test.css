@@ -1,3 +1,5 @@
+/* Client styles */
+
 @font-face {
     font-family: 'SBL Hebrew';
     src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
@@ -9,6 +11,7 @@
 
 body {
     font-size: 8em;
+    text-rendering: optimizeLegibility;
 }
 p {
     margin: 0;
@@ -18,10 +21,15 @@ p {
 }
 :lang(he) {
     font-family: 'SBL Hebrew';
-    direction: rtl;
 }
 :lang(ar) {
     font-family: 'Droid Naskh';
+}
+
+
+/* Library styles */
+
+:lang(he), :lang(ar) {
     direction: rtl;
 }
 
