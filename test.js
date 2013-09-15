@@ -32,6 +32,8 @@ function cluster_letter(word, lang, positions) {
     var split = word.split(nonMn);
     var clustered = split.shift();
     var prejoin = zwnj, postjoin = zwj, pos = 0;
+    var next = positions ? positions.shift() : true;
+
     while (split.length) {
         var letter = split.shift(), vowels = split.shift();
         var lettervowels = letter + vowels;
@@ -71,6 +73,6 @@ var words = document.getElementsByClassName('positions'), word, positions;
 for (var i = 0, l = words.length; i < l; i ++) {
     word = words[i];
     positions = word.dataset.positions.split(',').map(function(v) { return +v; });
-    word.innerHTML = cluster(word.innerHTML.trim(spaces), findlang(word), positions);
+    word.innerHTML = cluster_letter(word.innerHTML.trim(spaces), findlang(word), positions);
     word.className += " word";
 }
