@@ -1,6 +1,10 @@
 /* Client styles */
 
 @font-face {
+    font-family: 'Arno Pro';
+    src: local('Arno Pro'), url('ArnoPro-Regular.otf');
+}
+@font-face {
     font-family: 'SBL Hebrew';
     src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
 }
