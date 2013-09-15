@@ -10,8 +10,11 @@ var langs = {
 function words(sentence, lang) {
     var split = sentence.trim(spaces).split(spaces);
     for (var i = 0, l = split.length; i < l; i += 2)
-        split[i] = '<span class="word">' + langs[lang].cluster(split[i], lang) + '</span>';
+        split[i] = '<span class="word">' + cluster(split[i], lang) + '</span>';
     return split.join('');
+}
+function cluster(word, lang, positions) {
+    return langs[lang].cluster(word, lang, positions);
 }
 function cluster_word(word, lang) {
     var split = word.split(nonMn);
@@ -25,10 +28,10 @@ function cluster_word(word, lang) {
 
     return '<span class="cluster" data-letter="' + untittled + '">' + lettervowels + '</span>';
 }
-function cluster_letter(word, lang) {
+function cluster_letter(word, lang, positions) {
     var split = word.split(nonMn);
     var clustered = split.shift();
-    var prejoin = zwnj, postjoin = zwj;
+    var prejoin = zwnj, postjoin = zwj, pos = 0;
     while (split.length) {
         var letter = split.shift(), vowels = split.shift();
         var lettervowels = letter + vowels;
@@ -41,9 +44,15 @@ function cluster_letter(word, lang) {
             lettervowels = prejoin + lettervowels + postjoin;
         }
 
-        clustered += '<span class="cluster" data-letter="' + untittled + '">' + lettervowels + '</span>';
+	if (next === true || next === pos) {
+            clustered += '<span class="cluster" data-letter="' + untittled + '">' + lettervowels + '</span>';
+            if (next !== true)
+                next = positions.shift();
+        }
+        else
+            clustered += lettervowels;
 
-        prejoin = zwj;
+        prejoin = zwj, pos ++;
     }
     return clustered;
 }
@@ -57,4 +66,11 @@ var sentences = document.getElementsByClassName('sentence'), sentence;
 for (var i = 0, l = sentences.length; i < l; i ++) {
     sentence = sentences[i];
     sentence.innerHTML = words(sentence.innerHTML, findlang(sentence));
+}
+var words = document.getElementsByClassName('positions'), word, positions;
+for (var i = 0, l = words.length; i < l; i ++) {
+    word = words[i];
+    positions = word.dataset.positions.split(',').map(function(v) { return +v; });
+    word.innerHTML = cluster(word.innerHTML.trim(spaces), findlang(word), positions);
+    word.className += " word";
 }
