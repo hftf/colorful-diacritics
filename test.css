@@ -10,7 +10,8 @@
     /* display: inline-block; */
 }
 .word .cluster::first-letter {}
-.word:hover .cluster::after {
+.nohover .word       .cluster::after,
+.hover   .word:hover .cluster::after {
     color: #f5d30b;
     -webkit-text-stroke: 1.5px black;
     -webkit-text-fill-color: #f5d30b;
@@ -19,17 +20,23 @@
 /*.word:hover .cluster::first-letter {
     visibility: hidden;
 }*/
-.word:hover .cluster {
+.nohover .word       .cluster,
+.hover   .word:hover .cluster {
     position: relative;
 }
-.word:hover .cluster::after {
+.nohover .word       .cluster::after,
+.hover   .word:hover .cluster::after {
     content: attr(data-letter);
     position: absolute;
     top: 0;
 }
-:lang(en) .word:hover .cluster::after {
+.nohover :lang(en) .word       .cluster::after,
+.hover   :lang(en) .word:hover .cluster::after {
     left: 0;
 }
-:lang(he) .word:hover .cluster::after, :lang(ar) .word:hover .cluster::after {
+.nohover :lang(he) .word       .cluster::after,
+.nohover :lang(ar) .word       .cluster::after,
+.hover   :lang(he) .word:hover .cluster::after,
+.hover   :lang(ar) .word:hover .cluster::after {
     right: 0;
 }
