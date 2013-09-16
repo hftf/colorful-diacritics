@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Arno Pro';
+    src: local('Arno Pro'), url('ArnoPro-Regular.otf');
+}
+@font-face {
+    font-family: 'SBL Hebrew';
+    src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
+}
+@font-face {
+    font-family: 'Droid Naskh';
+    src: local('Droid Naskh'), url('DroidNaskh-Regular.ttf');
+}
+
+body {
+    font-size: 8em;
+    text-rendering: optimizeLegibility;
+}
+p {
+    margin: 0;
+}
+:lang(en) {
+    font-family: 'Arno Pro';
+}
+:lang(he) {
+    font-family: 'SBL Hebrew';
+}
+:lang(ar) {
+    font-family: 'Droid Naskh';
+}
