@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Arno Pro';
-    src: local('Arno Pro'), url('ArnoPro-Regular.otf');
+    src: local('Arno Pro'), url('fonts/ArnoPro-Regular.otf');
 }
 @font-face {
     font-family: 'SBL Hebrew';
-    src: local('SBL Hebrew'), url('SBL_Hbrw.otf');
+    src: local('SBL Hebrew'), url('fonts/SBL_Hbrw.otf');
 }
 @font-face {
     font-family: 'Droid Naskh';
-    src: local('Droid Naskh'), url('DroidNaskh-Regular.ttf');
+    src: local('Droid Naskh'), url('fonts/DroidNaskh-Regular.ttf');
 }
 
 body {
