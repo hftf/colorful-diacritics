@@ -8,3 +8,4 @@ Colorful diacritics: Figuring out a better way to do something like [this](http:
 ### Bugs to watch
 
 * Webkit/Mac: https://bugs.webkit.org/show_bug.cgi?id=119640
+* Webkit/Mac: https://bugs.webkit.org/show_bug.cgi?id=121377
