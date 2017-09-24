@@ -3,6 +3,7 @@ var nonMnMc = /([^\u0300-\u036f\u0483-\u0487\u0591-\u05bd\u05bf\u05c1-\u05c2\u05
 var zwnj = '\u200c', zwj = '\u200d';
 var langs = {
     'ar': { 'joining': true, 'cluster': cluster_word },
+    'syc':{ 'joining': true, 'cluster': cluster_word },
     'el': { 'cluster': cluster_letter },
     'en': { 'cluster': cluster_letter },
     'he': { 'cluster': cluster_letter },

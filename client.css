@@ -73,3 +73,6 @@ body > p .letter {
 :lang(ar) {
     font-family: 'Droid Naskh';
 }
+:lang(syc) {
+    font-family: 'Estrangelo Edessa';
+}
