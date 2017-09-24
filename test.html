@@ -6,7 +6,50 @@
     <link type="text/css" rel="stylesheet" href="test.css" />
     <link type="text/css" rel="stylesheet" href="client.css" />
 </head>
-<body class="hover">
+<body class="nohover">
+    <h1>Summary</h1>
+    <p>
+        <strong>For languages written using diacritics,
+        educational materials often apply different styles
+        to <span class="letter">letters</span> and <span class="diacritic">diacritics</span>.</strong><br />
+        For example, to conjugate a verb in Hebrew,
+        vowel diacritics are inserted between the letters of the verb root,
+        and prefixes, infixes, and suffixes may be added.
+        <a href="http://www.ekspublishing.com/images/eb533.jpg">This image</a>
+        illustrates Hebrew verb conjugation for the verb root
+        <span lang="he" style="line-height: 0;">ש.מ.ר</span> by outlining its letters,
+        but it serves as a template for any similar verb root.
+    </p>
+    <p>
+        For a long time, web browsers have not supported this task.
+        This is a difficult task because letters and diacritics are
+        generally rendered concurrently, and thus behave similar to ligatures.
+    </p>
+    <h1>Demo</h1>
+    <p>
+        For ease of comparison, each sentence is displayed three times:
+        <ul>
+        <li>unstyled, using <a href="https://en.wikipedia.org/wiki/Precomposed_character">precomposed characters</a>
+            (<a href="https://en.wikipedia.org/wiki/Unicode_equivalence#Normalization">NFC</a>)</li>
+        <li>unstyled, using <a href="https://en.wikipedia.org/wiki/Combining_character">combining diacritics</a> (NFD)</li>
+        <li>styled</li>
+        </ul>
+    </p>
+    <p>
+        This demo attempts to fake the task by positioning styled copies of the letters on top of the original words.
+        JavaScript is used to split the words into clusters of base letters and diacritics,
+        and then wrap each cluster in a span with a custom attribute containing a copy of the base letter.
+        The <code>::after</code> pseudo-element can then display that copy, and be positioned and styled.
+    </p>
+    <pre>
+&lt;span class="word">
+    &lt;span class="cluster" data-letter="M">M&lt;/span>
+    &lt;span class="cluster" data-letter="a">a&amp;#x0304;&lt;/span>
+    &lt;span class="cluster" data-letter="ori">ori&lt;/span>
+&lt;/span></pre>
+    <p>This demo has a <a href="https://github.com/hftf/colorful-diacritics">GitHub repository</a>.</p>
+
+    <main>
     <h2>English</h2>
     <p class="sentence" lang="en" dir="ltr">
         The Māori señor served açaí phở in the café.
@@ -34,6 +77,7 @@
     <p lang="ar" dir="rtl"><span class="positions" data-positions="1,2,3">
     تَفْعَلَانِ
     </span></p>
+    </main>
 
     <script type="text/javascript" src="test.js"></script>
 </body>

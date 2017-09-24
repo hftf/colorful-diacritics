@@ -12,12 +12,34 @@
 }
 
 body {
-    font-size: 8em;
+    font-family: 'Times', 'Times New Roman', serif;
     text-rendering: optimizeLegibility;
 }
-p {
-    margin: 0;
+
+main p {
+    background: #f8f4ff;
+    font-size: 5em;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
+main ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.letter {
+    color: #f5d30b;
+    -webkit-text-stroke: 1.5px black;
+    -webkit-text-fill-color: #f5d30b;
+}
+.diacritic {
+    color: #149adc;
+}
+body > p .letter {
+    -webkit-text-stroke-width: 0.5px;
+}
+
 :lang(en) {
     font-family: 'Arno Pro';
 }
