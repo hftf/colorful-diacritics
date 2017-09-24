@@ -70,12 +70,19 @@ function findlang(el) {
 var sentences = document.getElementsByClassName('sentence'), sentence;
 for (var i = 0, l = sentences.length; i < l; i ++) {
     sentence = sentences[i];
-    sentence.innerHTML = words(sentence.innerHTML, findlang(sentence));
+    // For our purposes, assume the sentence already uses NFD.
+    sentence.innerHTML = (
+        '<ul>' +
+        '<li><span>' + sentence.innerHTML.normalize('NFC') + '</span></li>' +
+        '<li><span>' + sentence.innerHTML + '</span></li>' +
+        '<li>' + words(sentence.innerHTML, findlang(sentence)) + '</li>' +
+        '</ul>'
+    );
 }
 var words = document.getElementsByClassName('positions'), word, positions;
 for (var i = 0, l = words.length; i < l; i ++) {
     word = words[i];
     positions = word.dataset.positions.split(',').map(function(v) { return +v; });
-    word.innerHTML = cluster_letter(word.innerHTML.trim(spaces), findlang(word), positions);
+    word.innerHTML += '<br />' + cluster_letter(word.innerHTML.trim(spaces), findlang(word), positions);
     word.className += " word";
 }
