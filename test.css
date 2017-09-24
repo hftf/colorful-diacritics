@@ -28,7 +28,8 @@
 .hover   .word:hover .cluster::after {
     content: attr(data-letter);
     position: absolute;
-    top: 0;
+    /* This used to be here for a reason */
+    /* top: 0; */
 }
 .nohover :lang(en) .word       .cluster::after,
 .hover   :lang(en) .word:hover .cluster::after {
