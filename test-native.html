@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Colorful diacritics</title>
+    <link type="text/css" rel="stylesheet" href="test-native.css" />
+    <link type="text/css" rel="stylesheet" href="client.css" />
+</head>
+<body>
+    <h1>Summary</h1>
+    <p>
+        <strong>For languages written using diacritics,
+        educational materials often apply different styles
+        to <span class="letter">letters</span> and <span class="diacritic">diacritics</span>.</strong><br />
+        For example, to conjugate a verb in Hebrew,
+        vowel diacritics are inserted between the letters of the verb root,
+        and prefixes, infixes, and suffixes may be added.
+        <a href="http://www.ekspublishing.com/images/eb533.jpg">This image</a>
+        illustrates Hebrew verb conjugation for the verb root
+        <span lang="he" style="line-height: 0;">ש.מ.ר</span> by outlining its letters,
+        but it serves as a template for any similar verb root.
+    </p>
+    <p>
+        For a long time, web browsers have not supported this task.
+        This is a difficult task because letters and diacritics are
+        generally rendered concurrently, and thus behave similar to ligatures.
+    </p>
+    <h1>Demo</h1>
+    <p>
+        For ease of comparison, each sentence is displayed three times:
+        <ul>
+        <li>unstyled, using <a href="https://en.wikipedia.org/wiki/Precomposed_character">precomposed characters</a>
+            (<a href="https://en.wikipedia.org/wiki/Unicode_equivalence#Normalization">NFC</a>)</li>
+        <li>unstyled, using <a href="https://en.wikipedia.org/wiki/Combining_character">combining diacritics</a> (NFD)</li>
+        <li>styled</li>
+        </ul>
+    </p>
+    <p>
+        JavaScript is used to split the words into clusters of base letters and diacritics,
+        and then wrap each cluster in a span with a corresponding class
+        so that the clusters can be styled in browsers that have support.
+    </p>
+    <pre>
+&lt;span class="word">
+    &lt;span class="letter">M&lt;/span>
+    &lt;span class="letter">a&lt;/span>&lt;span class="diacritic">&amp;#x0304;&lt;/span>
+    &lt;span class="letter">ori&lt;/span>
+&lt;/span></pre>
+    <p>This demo has a <a href="https://github.com/hftf/colorful-diacritics">GitHub repository</a>.</p>
+
+    <main>
+    <h2>English</h2>
+    <p class="sentence" lang="en" dir="ltr">
+        The Māori señor served açaí phở in the café.
+    </p>
+
+    <h2>Greek</h2>
+    <p class="sentence" lang="el" dir="ltr">
+        Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς
+    </p>
+
+    <h2>Sanskrit</h2>
+    <p class="sentence" lang="sa" dir="ltr">
+        ओङ्कारार्थतया भातं तुर्योङ्काराग्रभासुरम्
+    </p>
+
+    <h2>Hebrew</h2>
+    <p class="sentence" lang="he" dir="rtl">
+        מַשָּׂ֥א דְבַר־יְהוָ֖ה אֶל־יִשְׂרָאֵ֑ל בְּיַ֖ד מַלְאָכִֽי
+    </p>
+
+    <h2>Arabic</h2>
+    <p class="sentence" lang="ar" dir="rtl">
+        بِسْمِ ٱللَّهِ ٱلرَّحْمَنِ ٱلرَّحِيمِ 
+    </p>
+
+    <h2>Syriac</h2>
+    <p class="sentence" lang="syc" dir="rtl">
+        ܡ̣ܢ ܟܠܗܘܿܢ ܐܝܼܠܵܢܹ̈ܐ ܕܲܒ݂ܦܲܪܕܲܝܣܵܐ
+    </p>
+
+    <h2>Hebrew, selected letters</h2>
+    <p lang="he" dir="rtl"><span class="positions" data-positions="1,2,3">
+      מְפַקְּחִים
+    </span></p>
+
+    <h2>Arabic, selected letters</h2>
+    <p lang="ar" dir="rtl"><span class="positions" data-positions="1,2,3">
+    تُفُعِّلْتُمَا
+    </span></p>
+    <p lang="ar" dir="rtl"><span class="positions" data-positions="1,2,3">
+    تَفْعَلَانِ
+    </span></p>
+    </main>
+
+    <script type="text/javascript" src="test-native.js"></script>
+</body>
+</html>
