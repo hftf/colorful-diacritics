@@ -3,12 +3,20 @@
     src: local('Arno Pro'), url('fonts/ArnoPro-Regular.otf');
 }
 @font-face {
+    font-family: 'Adobe Devanagari';
+    src: local('Adobe Devanagari'), url('fonts/AdobeDevanagari-Regular.otf');
+}
+@font-face {
     font-family: 'SBL Hebrew';
     src: local('SBL Hebrew'), url('fonts/SBL_Hbrw.otf');
 }
 @font-face {
     font-family: 'Droid Naskh';
     src: local('Droid Naskh'), url('fonts/DroidNaskh-Regular.ttf');
+}
+@font-face {
+    font-family: 'Estrangelo Edessa';
+    src: local('Estrangelo Edessa'), url('estre.ttf');
 }
 
 body {
