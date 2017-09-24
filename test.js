@@ -5,7 +5,8 @@ var langs = {
     'ar': { 'joining': true, 'cluster': cluster_word },
     'el': { 'cluster': cluster_letter },
     'en': { 'cluster': cluster_letter },
-    'he': { 'cluster': cluster_letter }
+    'he': { 'cluster': cluster_letter },
+    'sa': { 'cluster': cluster_letter } // use joining for automatic ligatures (fake+Firefox)
 };
 
 function words(sentence, lang) {
