@@ -6,28 +6,19 @@
 .word {
     white-space: nowrap;
 }
-.cluster {
-    /* Leave this to prevent the first letter from anti-wrapping */
-    /* display: inline-block; */
-}
-.word .cluster::first-letter {}
+
 .word .cluster::after {
     color: #f5d30b;
     -webkit-text-stroke: 1.5px black;
     -webkit-text-fill-color: #f5d30b;
 }
 
-/*.word:hover .cluster::first-letter {
-    visibility: hidden;
-}*/
 .word .cluster {
     position: relative;
 }
 .word .cluster::after {
     content: attr(data-letter);
     position: absolute;
-    /* This used to be here for a reason */
-    /* top: 0; */
 }
 [dir="ltr"] .word .cluster::after {
     left: 0;
