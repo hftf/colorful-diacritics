@@ -14,13 +14,31 @@
 body {
     font-family: 'Times', 'Times New Roman', serif;
     text-rendering: optimizeLegibility;
+    margin: 0;
 }
 
+h1, h2, p, ul, pre {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: inherit;
+}
+h2 {
+    text-align: center;
+}
+
+main {
+    border-top: 3px solid #99b;
+}
+main p, main ul {
+    max-width: initial;
+}
 main p {
     background: #f8f4ff;
     font-size: 5em;
     margin-top: 8px;
     margin-bottom: 8px;
+    padding: 4px 20px;
 }
 main ul {
     margin: 0;
