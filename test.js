@@ -42,8 +42,9 @@ function cluster_letter(word, lang, positions) {
 
         // Good for preserving kerning,
         // but bad for automatic ligatures (fake+Sanskrit on Firefox)
-        while (vowels === '' && split.length && split[1] === '')
-            letter += split.shift(), vowels += split.shift();
+        if (!positions) // TODO letter clusters with "positions"
+            while (vowels === '' && split.length && split[1] === '')
+                letter += split.shift(), vowels += split.shift();
 
         var lettervowels = letter + vowels;
         var untittled = (letter in tittles && vowels) ? tittles[letter] : letter;
