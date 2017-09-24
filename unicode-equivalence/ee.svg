@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+	<metadata></metadata>
+	<defs>
+		<font id="mm" horiz-adv-x="20">
+			<font-face units-per-em="40" ascent="20" descent="0" />
+			<glyph unicode="a"       horiz-adv-x="20" d="M0,0  l0,20 l20,-20 Z" />
+			<glyph unicode="&#x301;" horiz-adv-x="20" d="M0,10 l0,10 l20,0 l0,-10 Z" />
+			<glyph unicode="á"       horiz-adv-x="20" d="M0,0  l5,20 l10,0 l5,-20 Z" />
+		</font>
+	</defs>
+</svg>

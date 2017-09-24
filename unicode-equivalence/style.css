@@ -1,0 +1,38 @@
+@font-face { font-family: "ee"; src: url('ee.ttf'); }
+@font-face { font-family: "em"; src: url('em.ttf'); }
+@font-face { font-family: "me"; src: url('me.ttf'); }
+@font-face { font-family: "mm"; src: url('mm.ttf'); }
+
+body {
+	font-family: 'Brill';
+	font-size: 1.2em;
+}
+code {
+	font: inherit;
+	background: #f3f3f3;
+	border-radius: 2px;
+	border: 1px solid #d3d3d3;
+	padding: 2px 4px;
+}
+th {
+	font-weight: normal;
+}
+th, td {
+	padding: 2px 20px;
+	text-align: left;
+}
+
+table {
+	border: 1px solid;
+	border-width: 2px 0;
+}
+thead tr+tr+tr th {
+	border-bottom: 1px solid;
+}
+tbody td {
+	font-size: 2em;
+}
+tbody td:nth-of-type(4) { font-family: ee, 'Brill'; }
+tbody td:nth-of-type(3) { font-family: em, 'Brill'; }
+tbody td:nth-of-type(2) { font-family: me, 'Brill'; }
+tbody td:nth-of-type(1) { font-family: mm, 'Brill'; }

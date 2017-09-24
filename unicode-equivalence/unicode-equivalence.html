@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<table cellspacing="10">
+	<thead>
+		<tr>
+			<td />
+			<th>Font 1</th>
+			<th>Font 2</th>
+			<th>Font 3</th>
+			<th>Font 4</th>
+		</tr>
+		<tr>
+			<td />
+			<th><code>&#x25cc;&#x0301;</code> missing</th>
+			<th><code>&#x25cc;&#x0301;</code> exists</th>
+			<th><code>&#x25cc;&#x0301;</code> missing</th>
+			<th><code>&#x25cc;&#x0301;</code> exists</th>
+		</tr>
+		<tr>
+			<td />
+			<th><code>á</code> missing</th>
+			<th><code>á</code> missing</th>
+			<th><code>á</code> exists</th>
+			<th><code>á</code> exists</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Input <code>a</code></th>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<th>Input <code>&#x25cc;&#x0301;</code></th>
+			<td>&#x0301;</td>
+			<td>&#x0301;</td>
+			<td>&#x0301;</td>
+			<td>&#x0301;</td>
+		</tr>
+		<tr>
+			<th>Input <code>a + &#x25cc;&#x0301;</code></th>
+			<td>a&#x0301;</td>
+			<td>a&#x0301;</td>
+			<td>a&#x0301;</td>
+			<td>a&#x0301;</td>
+		</tr>
+		<tr>
+			<th>Input <code>á</code></th>
+			<td>á</td>
+			<td>á</td>
+			<td>á</td>
+			<td>á</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
