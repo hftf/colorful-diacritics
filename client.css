@@ -61,6 +61,9 @@ body > p .letter {
 :lang(en) {
     font-family: 'Arno Pro';
 }
+:lang(el) {
+    font-family: 'Arno Pro';
+}
 :lang(he) {
     font-family: 'SBL Hebrew';
 }
