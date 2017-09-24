@@ -1,7 +1,3 @@
-:lang(he), :lang(ar) {
-    direction: rtl;
-}
-
 .word {
     white-space: nowrap;
 }
@@ -31,13 +27,11 @@
     /* This used to be here for a reason */
     /* top: 0; */
 }
-.nohover :lang(en) .word       .cluster::after,
-.hover   :lang(en) .word:hover .cluster::after {
+.nohover [dir="ltr"] .word       .cluster::after,
+.hover   [dir="ltr"] .word:hover .cluster::after {
     left: 0;
 }
-.nohover :lang(he) .word       .cluster::after,
-.nohover :lang(ar) .word       .cluster::after,
-.hover   :lang(he) .word:hover .cluster::after,
-.hover   :lang(ar) .word:hover .cluster::after {
+.nohover [dir="rtl"] .word       .cluster::after,
+.hover   [dir="rtl"] .word:hover .cluster::after {
     right: 0;
 }
